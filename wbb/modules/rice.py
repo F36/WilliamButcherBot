@@ -28,12 +28,12 @@ from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
 from wbb import app2
 from wbb.core.decorators.errors import capture_err
 
-RICE_GROUP = "cursed_videos"
+from_list = ["cursed_videos", "shitpost_status", 972029825]
 RICE_CHANNEL = "Decomposed"
 
 
 @app2.on_message(
-    filters.chat([972029825, RICE_GROUP])
+    filters.chat(from_list)
     & filters.video
     & ~filters.forwarded
     & ~filters.edited
