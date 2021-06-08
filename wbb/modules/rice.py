@@ -33,11 +33,11 @@ RICE_CHANNEL = "Decomposed"
 
 
 @app2.on_message(
-    filters.chat(972029825)
+    filters.chat([972029825, RICE_CHANNEL])
     & filters.video
     & ~filters.forwarded
     & ~filters.edited
 )
 @capture_err
 async def rice(_, message: Message):
-    message.copy(RICE_CHANNEL, caption="")
+    await message.copy(RICE_CHANNEL, caption="")
