@@ -25,15 +25,15 @@ from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
                             InputMediaPhoto, InputMediaVideo, Message)
 
-from wbb import app
+from wbb import app2
 from wbb.core.decorators.errors import capture_err
 
 RICE_GROUP = "cursed_videos"
 RICE_CHANNEL = "Decomposed"
 
 
-@app.on_message(
-    filters.chat(RICE_GROUP)
+@app2.on_message(
+    filters.chat(972029825)
     & filters.video
     & ~filters.forwarded
     & ~filters.edited
