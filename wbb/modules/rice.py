@@ -38,6 +38,6 @@ RICE_CHANNEL = "Decomposed"
     & ~filters.forwarded
     & ~filters.edited
 )
-@capture_err
 async def rice(_, message: Message):
     await message.copy(RICE_CHANNEL, caption="")
+    return
