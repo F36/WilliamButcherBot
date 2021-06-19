@@ -1,11 +1,11 @@
 *.m4a
 *.apk
+spam_mod.py
 *.c
 exec
 *.out
 __pycache__
 *.opus
-nsfw.py
 unknown_errors.txt
 *.jpg
 token.py

@@ -30,13 +30,6 @@ from wbb import (BOT_ID, LOG_GROUP_ID, LOG_MENTIONS, USERBOT_ID, USERBOT_NAME,
 from wbb.core.decorators.errors import capture_err
 from wbb.utils.filter_groups import taglog_group
 
-__MODULE__ = "Tag Logger"
-__HELP__ = """
-THIS MODULE IS ONLY FOR SUDOERS
-
-This module logs every action that contains your id, name, username, mention.
-"""
-
 IS_USERBOT_ONLINE = False
 
 
@@ -60,7 +53,7 @@ async def sendLog(message: Message):
 """
     button = InlineKeyboard(row_width=1)
     button.add(InlineKeyboardButton(text="Check Action", url=message.link))
-    await app.send_message(LOG_GROUP_ID, text=msg, reply_markup=button)
+    await app.send_message(LOG_GROUP_ID, text=msg, reply_markup=button, disable_web_page_preview=True)
 
 
 @app2.on_message(

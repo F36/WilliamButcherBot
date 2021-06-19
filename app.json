@@ -11,15 +11,7 @@
     "telegram-bot",
     "pyrogram"
     ],
-    "stack": "heroku-20",
-    "buildpacks": [
-      {
-        "url": "heroku/python"
-      },
-      {
-        "url": "heroku-community/apt"
-      }
-    ],
+    "stack": "container",
     "env": {
         "BOT_TOKEN": {
             "description": "Obtain a Telegram bot token by contacting @BotFather",
@@ -78,6 +70,14 @@
         "LOG_MENTIONS": {
             "description": "Fill 1 to turn this one, or 0 to turn it off.",
             "required": true
+        },
+        "USERBOT_PREFIX": {
+            "description": "Userbot command prefix, Leave it empty if you don't know what that is.",
+            "required": false
+        },
+        "SPAM_CHECK_EXCEPTION_GROUPS": {
+            "description": "Groups where spam scans shouldn't happen, leave it empty if you don't know what that is",
+            "required": false
         }
     }
 }

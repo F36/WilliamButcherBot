@@ -23,7 +23,7 @@
 
 ## Requirements
 
-- Python >= 3.7
+- Python >= 3.9
 - A [Telegram API key](https://docs.pyrogram.org/intro/setup#api-keys).
 - A [Telegram bot token](https://t.me/botfather).
 - A [MongoDB URI](https://telegra.ph/How-To-get-Mongodb-URI-04-06)
@@ -42,7 +42,7 @@ $ cp sample_config.py config.py
 ```
 Edit **config.py** with your own values
 
-# Run
+# Run Directly
 ```sh
 $ python3 -m wbb
 ```
@@ -56,13 +56,30 @@ $ git clone https://github.com/TheHamkerCat/WilliamButcherBot
 
 $ cd WilliamButcherBot
 
-$ pip3 install -U -r requirements.txt
+$ pip3 install pyrogram TgCrypto
 
 $ python3 str_gen.py
 ```
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/thehamkercat/WilliamButcherBot/)
 
+
+# Docker
+
+```sh
+$ git clone https://github.com/TheHamkerCat/WilliamButcherBot
+
+$ cd WilliamButcherBot
+
+$ cp sample_config.env config.env
+```
+Edit **config.env** with your own values
+
+```sh
+$ sudo docker build . -t wbb
+
+$ sudo docker run wbb
+```
 
 ## Note
 
